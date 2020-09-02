@@ -1,0 +1,17 @@
+version: "2.0"
+
+stories:
+
+- story: User fills feedback
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: feedback_form
+
+- story: User refuses to fill feedback
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: deny
+  - action: utter_sad
