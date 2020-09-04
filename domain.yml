@@ -15,7 +15,7 @@ slots:
 
 responses:
   utter_greet:
-  - text: "Hi, dear user tester! Thanks for helping us! 🎉 Do you want to get started?"
+  - text: "Hi 👋! Thanks for helping us with Rasa Open Source 2.0! 🎉 Do you want to get started?"
 
   utter_goodbye:
   - text: "Bye! Hope to see you soon!"
