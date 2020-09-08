@@ -15,12 +15,17 @@ implement the same behavior.
 In case the user sends a message with the intent `bot_challenge` , the assistant should
 always reply with `I am a bot, powered by Rasa.` Please add the necessary rule.
 
-## Task 3: Migrating a Form
+## Task 3: Add conditional rule (optional)
+
+Please change the rule from Task 2 so that it only applies when the slot `is_a_bot`
+was set to `True`.
+
+## Task 4: Migrating a Form
 
 Our provided assistant defines a `feedback_form` in the old Rasa Open Source 1 format
 within `actions.py`. Please migrate this form to Rasa Open Source 2.
 
-## Task 4: Migrating Fallbacks
+## Task 5: Migrating Fallbacks
 
 Our provided assistant defines a fallback policy in its model configuration 
 `config.yml`. Please migrate the fallback handling from the `FallbackPolicy` to its 

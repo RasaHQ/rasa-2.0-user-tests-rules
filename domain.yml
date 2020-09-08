@@ -13,6 +13,9 @@ slots:
   feedback:
     type: unfeaturized
 
+  is_a_bot:
+    type: bool
+
 responses:
   utter_greet:
   - text: "Hi 👋! Thanks for helping us with Rasa Open Source 2.0! 🎉 Do you want to get started?"
