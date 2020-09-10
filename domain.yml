@@ -1,42 +1,25 @@
 version: "2.0"
 
 intents:
-  - greet:
-      triggers: utter_greet
-  - goodbye:
-      triggers: utter_goodbye
+  - greet
+  - goodbye
   - bot_challenge
   - affirm
   - deny
 
 slots:
-  feedback:
-    type: unfeaturized
-
   is_a_bot:
     type: bool
 
 responses:
   utter_greet:
-  - text: "Hi 👋! Thanks for helping us with Rasa Open Source 2.0! 🎉 Do you want to get started?"
+  - text: "Hi 👋! Thanks for helping us with Rasa Open Source 2.0! 🎉"
 
   utter_goodbye:
   - text: "Bye! Hope to see you soon!"
 
-  utter_ask_feedback:
-  - text: "How do you like Rasa Open Source 2.0?"
-
-  utter_thanks_for_feedback:
-  - text: "I recorded your feedback!"
-
-  utter_sad:
-  - text: "That's a pity 😔 We wish you all the best and hope to see you soon."
-
   utter_default: 
   - text: "Sorry, I didn't understand you. Could you please repeat?"
-
-forms:
-- feedback_form
 
 session_config:
   session_expiration_time: 60

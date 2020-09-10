@@ -24,10 +24,5 @@ pipeline:
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
 policies:
-- name: MappingPolicy
-- name: FallbackPolicy
-  nlu_threshold: 0.5
-  fallback_action_name: "action_default_fallback"
-- name: FormPolicy
 - name: AugmentedMemoizationPolicy
   max_history: 3

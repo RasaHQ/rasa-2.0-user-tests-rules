@@ -4,29 +4,24 @@
 
 * [Rasa Open Source 2.0 Documentation](https://rasa.com/docs/rasa/next)
 
-## Task 1: Migrating FAQs
-
-The provided assistant has currently twho FAQs which are implemented using the
-`MappingPolicy`. Please replace the intent mappings which adequate rules which
-implement the same behavior.
-
-## Task 2: Create FAQ
+## Task 1: Create FAQ
 
 In case the user sends a message with the intent `bot_challenge` , the assistant should
 always reply with `I am a bot, powered by Rasa.` Please add the necessary rule.
 
-## Task 3: Add conditional rule (optional)
+## Task 2: Add a conditional rule
 
-Please change the rule from Task 2 so that it only applies when the slot `is_a_bot`
+Please change the rule from Task 1 so that it only applies when the slot `is_a_bot`
 was set to `True`.
 
-## Task 4: Migrating a Form
+## Task 3: Create a Form
 
-Our provided assistant defines a `feedback_form` in the old Rasa Open Source 1 format
-within `actions.py`. Please migrate this form to Rasa Open Source 2.
+Please define a form which asks the user for feedback and stores it in the slot
+`feedback`. Once the user provided the feedback, the assistant should thank the user
+for providing the feedback.
 
-## Task 5: Migrating Fallbacks
+## Task 4: Create a Fallback
 
-Our provided assistant defines a fallback policy in its model configuration 
-`config.yml`. Please migrate the fallback handling from the `FallbackPolicy` to its 
-Rasa Open Source 2 counterpart.
+NLU messages are often classified with low confidence levels. Please write a rule
+which asks the user to rephrase whenever a received message receives a lower
+confidence than 0.5.
